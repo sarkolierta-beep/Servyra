@@ -1,7 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useEffect, useMemo, useState } from 'react';
 
 const key='servyra-learning-events';
 
@@ -29,9 +28,11 @@ const matches:Record<string,string[]> = {
 };
 
 export default function Request(){
-  const searchParams=useSearchParams();
-  const initialText=searchParams.get('demo')||'';
-  const [text,setText]=useState(initialText);
+  const [text,setText]=useState('');
+  useEffect(()=>{
+    const demo=new URLSearchParams(window.location.search).get('demo');
+    if(demo) setText(demo);
+  },[]);
   const [city,setCity]=useState('Paris');
   const [date,setDate]=useState('');
   const [budget,setBudget]=useState('');
