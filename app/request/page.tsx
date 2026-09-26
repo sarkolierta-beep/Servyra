@@ -18,13 +18,13 @@ function classify(text:string){
 }
 
 const matches:Record<string,string[]> = {
-  'Débarras':['Débarras & Transport local','Enlèvement d'encombrants','Débarras de mobilier'],
-  'Ménage':['Ménage à domicile','Nettoyage ponctuel','Nettoyage après déménagement'],
-  'Jardinage':['Entretien de jardin','Taille de haies','Tonte et entretien'],
-  'Déménagement':['Petit déménagement','Aide au chargement','Transport avec utilitaire'],
+  'Débarras':["Débarras & Transport local","Enlèvement d'encombrants","Débarras de mobilier"],
+  'Ménage':['Ménage à domicile','Nettoyage ponctuel',"Nettoyage après déménagement"],
+  'Jardinage':['Entretien de jardin',"Taille de haies","Tonte et entretien"],
+  'Déménagement':["Petit déménagement","Aide au chargement","Transport avec utilitaire"],
   'Montage de meubles':['Montage de meubles','Montage IKEA','Pose et assemblage'],
-  'Petits travaux':['Bricolage à domicile','Petites réparations','Peinture et finitions'],
-  'Transport':['Transport local','Livraison avec utilitaire','Enlèvement et livraison'],
+  'Petits travaux':["Bricolage à domicile","Petites réparations","Peinture et finitions"],
+  'Transport':['Transport local',"Livraison avec utilitaire","Enlèvement et livraison"],
   'Autre':['Service local à préciser','Besoin sur mesure','Mise en relation à qualifier'],
 };
 
